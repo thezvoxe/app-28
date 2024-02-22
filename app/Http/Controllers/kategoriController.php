@@ -12,7 +12,7 @@ class kategoriController extends Controller
     public function index()
     {
         $kategori = Kategori::get();
-        return view('kategori', compact('kategori'), [
+        return view('admin.kategori', compact('kategori'), [
             "title"=> 'Kategori',
             "active"=> 'kategori',
         ]);
