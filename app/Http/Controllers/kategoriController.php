@@ -1,52 +1,81 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Models\Kategori;
-use Illuminate\View\View;
-
 
 use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
 
 class kategoriController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        $kategori = Katefori::all();
-        return view('admin.kategori',['nama_kategori' => $kategori]);
+        $kategori = Kategori::get();
+        return view('kategori', compact('kategori'), [
+            "title"=> 'Kategori',
+            "active"=> 'kategori',
+        ]);
     }
 
-    public function create(): View
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
     {
-        return view('admin.kategori');
+        return view('admin.kategori', [
+            "title"=> 'Form Kategori',
+        ]);
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         $kategori->validate($request, [
 
-           'nama_kategori' => 'required',
-        ]);
+            'nama_kategori' => 'required',
+         ]);
 
-        $kategori = new asd;
+         $kategori = new asd;
 
-        $kategori->nama_kategori = $request->nama_kategori;
+         $kategori->nama_kategori = $request->nama_kategori;
 
-        $kategori->save();
+         $kategori->save();
 
-        return redirect('admin.kategori');
-
+         return redirect('admin.kategori');
     }
-    // public function store(Request $kategori): RedirectResponse
-    // {
-    //     $kategori->validate($request, [
-    //     'nama_kategori' => 'required|min:20'
 
-    // ]);
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
 
-    // Kategori::create([
-    //     'nama_kategori' => $kategori
-    // ]);
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
 
-    // }
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
 }
