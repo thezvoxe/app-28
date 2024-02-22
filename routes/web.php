@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\kategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('kategori', 'kategoriController');
+Route::resource('kategori', kategoriController::class);
+
+
+Route::get('/tambahkategori', function () {
+    return view('admin.kategori.tambahkategori');
+});
+Route::get('/editkategori', function () {
+    return view('admin.kategori.editkategori');
+});
+Route::get('/detailkategori', function () {
+    return view('admin.kategori.detailkategori');
+});
 
 Route::get('/', function () {
     return view('admin.welcome');
@@ -35,9 +47,9 @@ Route::get('/user', function () {
     return view('admin.user');
 });
 
-Route::get('/kategori', function () {
-    return view('admin.kategori');
-});
+// Route::get('/kategori', function () {
+//     return view('admin.kategori');
+// });
 
 
 Route::get('/buku', function () {
@@ -48,6 +60,4 @@ Route::get('/peminjam', function () {
     return view('admin.peminjam');
 });
 
-Route::get('/test', function () {
-    return view('test');
-});
+

@@ -167,38 +167,7 @@
                             <div class="card">
                                 <div class="card-content">
                                     <div class="form-group">
-                                            <!-- Button trigger for login form modal -->
-                                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tambahkategori">
-                                                Tambah Kategori
-                                            </button>
-                                            <!--Modal Tambah Kategori-->
-                                        <div class="modal fade text-left" id="tambahkategori" tabindex="-1" aria-labelledby="myModalLabel33" style="display: none;" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                            <h4 class="modal-title" id="myModalLabel33">Tambah Kategori Buku </h4>
-                                                    </div>
-                                                    <form action="" method="GET">
-                                                        <div class="modal-body">
-                                                            <label for="">Nama Kategori</label>
-                                                            <div class="form-group">
-                                                                <input id="nama_kategori" name="nama_kategori" type="text" class="form-control">
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                                                <i class="bx bx-x d-block d-sm-none"></i>
-                                                                <span class="d-none d-sm-block">Close</span>
-                                                            </button>
-                                                            <button type="submit" class="btn btn-primary ms-1" data-bs-dismiss="modal">
-                                                                <i class="bx bx-check d-block d-sm-none"></i>
-                                                                <span class="d-none d-sm-block">Tambah</span>
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <a href="{{url('kategori')}}" class="btn btn-outline-primary">Kembali</a>
                                     </div>
                                 </div>
                             </div>
@@ -206,74 +175,33 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body">
+                            <div class="table-responsive">
+                                <form action="/kategori">
+                                <table class="table table-borderless mb-0">
+                                    <thead>
+                                        <tr>
+                                            <label for="email">Nama Kategori: </label>
+                                            <div class="form-group">
+                                            <input id="email" type="text" class="form-control">
+                                        </tr>
+                                        <tr>
+                                            <button type="button" class="btn btn-success">Tambah</button>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </form>
+                            </div>
                         </div>
-                        <!-- table with no border -->
-                        <div class="table-responsive">
-                            <table class="table table-borderless mb-0">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Kategori</th>
-                                        <th>Opsi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td></td>
-                                        <td>
-                                                        <!-- Button trigger for login form modal -->
-                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editk">
-                                                            Edit
-                                                        </button>
-
-                                                        <!--login form Modal -->
-                                                        <div class="modal fade text-left" id="editk" tabindex="-1" aria-labelledby="myModalLabel33" aria-hidden="true" style="display: none;">
-                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h4 class="modal-title" id="myModalLabel33">Edit Kategori </h4>
-                                                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                                                        </button>
-                                                                    </div>
-                                                                    <form action="#">
-                                                                        <div class="modal-body">
-                                                                            <div class="form-group">
-                                                                                <input id="email" type="text" class="form-control">
-                                                                            </div>
-                                                                            </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                                                                <i class="bx bx-x d-block d-sm-none"></i>
-                                                                                <span class="d-none d-sm-block">Close</span>
-                                                                            </button>
-                                                                            <button type="button" class="btn btn-primary ms-1" data-bs-dismiss="modal">
-                                                                                <i class="bx bx-check d-block d-sm-none"></i>
-                                                                                <span class="d-none d-sm-block">Edit</span>
-                                                                            </button>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                                        <!-- Button trigger for login form modal -->
-                                                        <button type="button" class="btn btn-success">Hapus</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    </div>
+                </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
-
 </div>
         </div>
     </div>

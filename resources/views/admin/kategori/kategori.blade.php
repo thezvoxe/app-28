@@ -77,14 +77,14 @@
             </li>
             <li class="sidebar-title text-dark">Data</li>
             <li
-                class="sidebar-item active">
+                class="sidebar-item">
                 <a href="{{url('/user')}}" class='sidebar-link'>
                     <i class="bi bi-person-fill"></i>
                     <span>User</span>
                 </a>
             </li>
             <li
-                class="sidebar-item">
+                class="sidebar-item active">
                 <a href="{{url('/kategori')}}" class='sidebar-link'>
                     <i class="bi bi-tags-fill"></i>
                     <span>Kategori Buku</span>
@@ -113,7 +113,7 @@
             <header>
                 <nav class="navbar navbar-expand navbar-light navbar-top">
                     <div class="container-fluid">
-                        <h3>Tampilan User</h3>
+                        <h3>Kategori Buku</h3>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -166,55 +166,9 @@
                         <div class="col-md-6 col-12">
                             <div class="card">
                                 <div class="card-content">
-                                        <div class="form-group">
-                                            <!-- Button trigger for login form modal -->
-                                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#inlineForm1">
-                                                Tambah Data
-                                            </button>
-                                            <!--login form Modal -->
-                                            <div class="modal fade text-left" id="inlineForm1" tabindex="-1" aria-labelledby="myModalLabel33" style="display: none;" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title" id="myModalLabel33">Tambah Data User </h4>
-                                                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                                            </button>
-                                                        </div>
-                                                        <form action="#">
-                                                            <div class="modal-body">
-                                                                <label for="email">Nama Lengkap: </label>
-                                                                <div class="form-group">
-                                                                    <input id="email" type="text" class="form-control">
-                                                                </div>
-                                                                <label for="password">Email: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" class="form-control">
-                                                                </div>
-                                                                <label for="password">Alamat: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" class="form-control">
-                                                                </div>
-                                                                <label for="password">User Role: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" class="form-control">
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                                                    <span class="d-none d-sm-block">Close</span>
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary ms-1" data-bs-dismiss="modal">
-                                                                    <i class="bx bx-check d-block d-sm-none"></i>
-                                                                    <span class="d-none d-sm-block">Tambah</span>
-                                                                </button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="form-group">
+                                        <a href="{{url('tambahkategori')}}" class="btn btn-outline-primary">Tambah Kategori</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -222,94 +176,37 @@
                     <div class="card-content">
                         <div class="card-body">
                         </div>
-                        <!-- table with no border -->
                         <div class="table-responsive">
                             <table class="table table-borderless mb-0">
+                                @dd($kategori)
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nama Lengkap</th>
-                                        <th>Email</th>
-                                        <th>Alamat</th>
-                                        <th>Role</th>
+                                        <th>Kategori</th>
                                         <th>Opsi</th>
                                     </tr>
                                 </thead>
+                                @foreach($kategori as $item)
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Setyo Dwi Santoso</td>
-                                        <td>setyo@gmail.com</td>
-                                        <td>Persada</td>
-                                        <td>Admin</td>
+                                        <td></td>
+                                        <td>{{$item->nama_kategori}}</td>
                                         <td>
-                                                        <!-- Button trigger for login form modal -->
-                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inlineForm">
-                                                            Edit
-                                                        </button>
-
-                                                        <!--login form Modal -->
-                                                        <div class="modal fade text-left" id="inlineForm" tabindex="-1" aria-labelledby="myModalLabel33" aria-hidden="true" style="display: none;">
-                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h4 class="modal-title" id="myModalLabel33">Edit Data User </h4>
-                                                                    </div>
-                                                                    <form action="#">
-                                                                        <div class="modal-body">
-                                                                            <label for="email">Nama Lengkap: </label>
-                                                                            <div class="form-group">
-                                                                                <input id="email" type="text" class="form-control">
-                                                                            </div>
-                                                                            <label for="password">Email: </label>
-                                                                            <div class="form-group">
-                                                                                <input id="password" type="password" class="form-control">
-                                                                            </div>
-                                                                            <label for="password">Alamat: </label>
-                                                                            <div class="form-group">
-                                                                                <input id="password" type="password" class="form-control">
-                                                                            </div>
-                                                                            <label for="password">User Role: </label>
-                                                                            <div class="form-group">
-                                                                                <input id="password" type="password" class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                                                                <i class="bx bx-x d-block d-sm-none"></i>
-                                                                                <span class="d-none d-sm-block">Close</span>
-                                                                            </button>
-                                                                            <button type="button" class="btn btn-primary ms-1" data-bs-dismiss="modal">
-                                                                                <i class="bx bx-check d-block d-sm-none"></i>
-                                                                                <span class="d-none d-sm-block">Simpan</span>
-                                                                            </button>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                                        <!-- Button trigger for login form modal -->
-                                                        <button type="button" class="btn btn-success">
-                                                            Hapus
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <a href="{{url('/editkategori')}}" class="btn btn-primary">Edit</a>
+                                            <a href="{{url('/detailkategori')}}" class="btn btn-secondary">Detail</a>
+                                            <button type="button" class="btn btn-success">Hapus</button>
                                         </td>
                                     </tr>
                                 </tbody>
+                                @endforeach
                             </table>
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
-
 </div>
         </div>
     </div>

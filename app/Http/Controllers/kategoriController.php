@@ -12,10 +12,8 @@ class kategoriController extends Controller
     public function index()
     {
         $kategori = Kategori::get();
-        return view('admin.kategori', compact('kategori'), [
-            "title"=> 'Kategori',
-            "active"=> 'kategori',
-        ]);
+        dd($kategori);
+        return view('admin.kategori', compact('kategori'));
     }
 
     /**
@@ -23,9 +21,9 @@ class kategoriController extends Controller
      */
     public function create()
     {
-        return view('admin.kategori', [
-            "title"=> 'Form Kategori',
-        ]);
+    return view('admin.kategori', [
+    "title"=> 'Form Kategori',
+    ]);
     }
 
     /**
@@ -33,18 +31,9 @@ class kategoriController extends Controller
      */
     public function store(Request $request)
     {
-        $kategori->validate($request, [
-
-            'nama_kategori' => 'required',
-         ]);
-
-         $kategori = new asd;
-
-         $kategori->nama_kategori = $request->nama_kategori;
-
-         $kategori->save();
-
-         return redirect('admin.kategori');
+        $kategori = new Kategori();
+        $kategori->nama_kategori = $request->nama_kategori;
+        $kategori->save();
     }
 
     /**
