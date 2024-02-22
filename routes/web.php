@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::resource('kategori', 'kategoriController');
+
 Route::get('/', function () {
     return view('admin.welcome');
 });
