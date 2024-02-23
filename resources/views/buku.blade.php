@@ -85,7 +85,7 @@
             </li>
             <li
                 class="sidebar-item">
-                <a href="{{url('/kategori')}}" class='sidebar-link'>
+                <a href="{{url('/posts')}}" class='sidebar-link'>
                     <i class="bi bi-tags-fill"></i>
                     <span>Kategori Buku</span>
                 </a>
@@ -136,21 +136,12 @@
                                         </div>
                                     </div>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;">
-                                    <li>
-                                        <h6 class="dropdown-header">Hello, John!</h6>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> My
-                                            Profile</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-gear me-2"></i>
-                                            Settings</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-wallet me-2"></i>
-                                            Wallet</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"><i
-                                                class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;"><li>
+                                    <h6 class="dropdown-header">Hello Voxe!</h6>
+                                </li>
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i
+                                class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -166,112 +157,9 @@
                         <div class="col-md-6 col-12">
                             <div class="card">
                                 <div class="card-content">
-                                        <div class="form-group">
-                                            <!-- Button trigger for login form modal -->
-                                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tambahbuku">
-                                                Tambah Buku
-                                            </button>
-
-                                            <!--login form Modal -->
-                                            <div class="modal fade text-left" id="tambahbuku" tabindex="-1" aria-labelledby="myModalLabel33" style="display: none;" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title" id="myModalLabel33">Tambah Data Buku </h4>
-                                                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                                            </button>
-                                                        </div>
-                                                        <form action="#">
-                                                            <div class="modal-body">
-                                                                <label for="email">Kategori: </label>
-                                                                <div class="form-group">
-                                                                    <input id="email" type="text" class="form-control">
-                                                                </div>
-                                                                <label for="password">Judul: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" class="form-control">
-                                                                </div>
-                                                                <label for="password">Penulis: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" class="form-control">
-                                                                </div>
-                                                                <label for="password">Penerbit: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" class="form-control">
-                                                                </div>
-                                                                <label for="password">Tahun Terbit: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" class="form-control">
-                                                                </div>
-                                                                </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                                                    <span class="d-none d-sm-block">Close</span>
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary ms-1" data-bs-dismiss="modal">
-                                                                    <i class="bx bx-check d-block d-sm-none"></i>
-                                                                    <span class="d-none d-sm-block">Tambah</span>
-                                                                </button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Button trigger for login form modal -->
-                                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cetak">
-                                                Cetak Laporan
-                                            </button>
-
-                                            <!--login form Modal -->
-                                            <div class="modal fade text-left" id="cetak" tabindex="-1" aria-labelledby="myModalLabel33" style="display: none;" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title" id="myModalLabel33">Edit Data </h4>
-                                                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                                            </button>
-                                                        </div>
-                                                        <form action="#">
-                                                            <div class="modal-body">
-                                                                <label for="email">Kategori: </label>
-                                                                <div class="form-group">
-                                                                    <input id="email" type="text" placeholder="Email Address" class="form-control">
-                                                                </div>
-                                                                <label for="password">Judul: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" placeholder="Password" class="form-control">
-                                                                </div>
-                                                                <label for="password">Penulis: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" placeholder="Password" class="form-control">
-                                                                </div>
-                                                                <label for="password">Penerbit: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" placeholder="Password" class="form-control">
-                                                                </div>
-                                                                <label for="password">Tahun Terbit: </label>
-                                                                <div class="form-group">
-                                                                    <input id="password" type="password" placeholder="Password" class="form-control">
-                                                                </div>
-                                                                </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                                                    <span class="d-none d-sm-block">Close</span>
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary ms-1" data-bs-dismiss="modal">
-                                                                    <i class="bx bx-check d-block d-sm-none"></i>
-                                                                    <span class="d-none d-sm-block">Tambah</span>
-                                                                </button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <a href="{{url('tambahbuku')}}" class="btn btn-outline-primary">
+                                        Tambah Buku
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +172,6 @@
                             <table class="table table-borderless mb-0">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
                                         <th>Kategori</th>
                                         <th>Judul</th>
                                         <th>Penulis</th>
@@ -295,7 +182,6 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
                                         <td>Keuangan</td>
                                         <td>Akademi Crypto</td>
                                         <td>Timothy & AVS</td>

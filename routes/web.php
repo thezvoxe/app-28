@@ -37,8 +37,8 @@ Route::get('/admin', function () {
 
 
 
-Route::get('/index2', function () {
-    return view('index2');
+Route::get('/tambahbuku', function () {
+    return view('tambahbuku');
 });
 
 

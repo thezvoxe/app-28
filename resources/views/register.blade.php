@@ -13,7 +13,7 @@
             <div class="card-body" style="background-color: #f3f3f3;">
               <form>
                 <div class="mb-3">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
                 </div>
                 <div class="mb-3">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
@@ -21,12 +21,14 @@
                 <div class="mb-3">
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
-                <div class="d-flex justify-content-center mb-3">                   
-                    <a href="{{url('login')}}" class="btn btn-secondary" style="border-radius: 15px; width: 100;">Daftar</a>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <a href="{{url('login')}}" class="btn btn-secondary" style="border-radius: 7px; width: 100;">Daftar</a>
                 </div>
                 <div>
-
-                    <a class="btn btn-secondary" style="border-radius: 15px" href="{{url('login')}}">Kembali</a>
+                    <a class="btn btn-secondary" style="border-radius: 7px" href="{{url('login')}}">Kembali</a>
                 </div>
               </form>
             </div>
@@ -34,7 +36,7 @@
     </div>
 
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
