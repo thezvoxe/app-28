@@ -175,24 +175,15 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <form action="/kategori">
-                                <table class="table table-borderless mb-0">
-                                    <thead>
-                                        <tr>
-                                            <label for="email">Nama Kategori: </label>
-                                            <div class="form-group">
-                                            <input id="email" type="text" class="form-control">
-                                        </tr>
-                                        <tr>
-                                            <button type="button" class="btn btn-success">Tambah</button>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-                            </form>
-                            </div>
+                                    <form action="{{url('simpankategori')}}" method="post">
+                                        {{ csrf_field() }}
+                                        <div class="form-group">
+                                            <input type="text" name="nama_kategori" id="nama_kategori" class="form-control" placeholder="Nama Kategori">
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary" type="submit">Tambah</button>
+                                        </div>
+                                    </form>
                         </div>
                     </div>
                 </div>

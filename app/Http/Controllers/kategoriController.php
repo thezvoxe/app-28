@@ -4,16 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class kategoriController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $kategori = Kategori::get();
-        dd($kategori);
-        return view('admin.kategori', compact('kategori'));
+        return view('kategori');
     }
 
     /**
@@ -21,9 +19,7 @@ class kategoriController extends Controller
      */
     public function create()
     {
-    return view('admin.kategori', [
-    "title"=> 'Form Kategori',
-    ]);
+        return view('tambahkategori');
     }
 
     /**
@@ -31,9 +27,7 @@ class kategoriController extends Controller
      */
     public function store(Request $request)
     {
-        $kategori = new Kategori();
-        $kategori->nama_kategori = $request->nama_kategori;
-        $kategori->save();
+        dd($request->al());
     }
 
     /**

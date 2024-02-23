@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\kategoriController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,50 +15,66 @@ use App\Http\Controller\kategoriController;
 |
 */
 
-Route::resource('kategori', kategoriController::class);
-
-
-Route::get('/tambahkategori', function () {
-    return view('admin.kategori.tambahkategori');
-});
-Route::get('/editkategori', function () {
-    return view('admin.kategori.editkategori');
-});
-Route::get('/detailkategori', function () {
-    return view('admin.kategori.detailkategori');
-});
+Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
 Route::get('/', function () {
-    return view('admin.welcome');
+    return view('welcome');
 });
 
 Route::get('/login', function () {
-    return view('admin.login');
-});
-
-Route::get('/admin', function () {
-    return view('admin.admin');
+    return view('login');
 });
 
 Route::get('/register', function () {
-    return view('admin.register');
+    return view('register');
 });
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+
+
+
+
+Route::get('/index2', function () {
+    return view('index2');
+});
+
+
+
+
+Route::get('/tambahkategori', function () {
+    return view('tambahkategori');
+});
+Route::get('/editkategori', function () {
+    return view('editkategori');
+});
+Route::get('/detailkategori', function () {
+    return view('detailkategori');
+});
+
+
+
+
+
+
 
 Route::get('/user', function () {
-    return view('admin.user');
+    return view('user');
 });
 
-// Route::get('/kategori', function () {
-//     return view('admin.kategori');
-// });
+Route::get('/kategori', function () {
+    return view('posts.index');
+});
 
 
 Route::get('/buku', function () {
-    return view('admin.buku');
+    return view('buku');
 });
 
 Route::get('/peminjam', function () {
-    return view('admin.peminjam');
+    return view('peminjam');
 });
 
 

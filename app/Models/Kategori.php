@@ -1,17 +1,17 @@
 <?php
 
 namespace App\Models;
-use App\Models\Kategori;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Kategori extends Model
 {
+    protected $table = "kategori";
+    protected $primaryKey = "id";
+    protected $fillable = [
 
-    use HasFactory;
+        'id','nama_kategori'
 
-    protected $table = 'kategori_buku';
-    protected $fillable=[
-        'nama_kategori'
     ];
 }
